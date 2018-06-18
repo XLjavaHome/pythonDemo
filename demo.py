@@ -1,4 +1,10 @@
 # 输入
-temp=input("输入测试:")
-guess=str(temp)
-print (guess)
+
+import requests
+
+url = "https://www.hao123.com/"
+respson = requests.get(url)
+s = vars(respson)
+print(s)
+dir(respson)
+# print(respson.text)
