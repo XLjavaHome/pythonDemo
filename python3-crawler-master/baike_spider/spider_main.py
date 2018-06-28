@@ -44,6 +44,7 @@ class SpiderMain(object):
 
 if __name__ == '__main__':
     # 爬虫入口url
-    root_url = 'http://baike.baidu.com/item/Python'
+    # root_url = 'http://baike.baidu.com/item/Python'
+    root_url = 'http://localhost:8383/first.jsp'
     obj_spider = SpiderMain()
     obj_spider.craw(root_url)
