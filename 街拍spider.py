@@ -4,6 +4,8 @@ from multiprocessing.pool import Pool
 from urllib.parse import urlencode
 
 import requests
+
+import 桌面路径
 GROUP_START = 1
 GROUP_END = 5
 def get_page(offset):
@@ -38,7 +40,7 @@ def get_images(json):
                         'title': title
                     }
 def save_image(item):
-    directroyPath = "d:/街拍"
+    directroyPath = 桌面路径.get_desktop() + "\\街拍";
     if (not os.path.exists(directroyPath)):
         os.mkdir(directroyPath)
     itemPath = directroyPath + "/" + item.get('title')
