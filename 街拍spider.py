@@ -7,7 +7,7 @@ import requests
 
 import 桌面路径
 GROUP_START = 1
-GROUP_END = 5
+GROUP_END = 100
 def get_page(offset):
     params = {
         'offset': offset,
