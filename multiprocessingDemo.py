@@ -13,5 +13,4 @@ if __name__ == "__main__":
     print("Mark~ Mark~ Mark~~~~~~~~~~~~~~~~~~~~~~")
     pool.close()
     pool.join()  # 调用join之前，先调用close函数，否则会出错。执行完close后不会有新的进程加入到pool,join函数等待所有子进程结束
-    print
-    "Sub-process(es) done."
+    print("Sub-process(es) done.")
