@@ -2,10 +2,12 @@ import os
 
 import requests
 
-import 桌面路径
+from xl import 文件
+
+
 def downloadPath():
     # 项目的路径
-    projectPath = 桌面路径.get_desktop();
+    projectPath = 文件.get_desktop();
     downloadPath = projectPath + "\\下载"
     if not os.path.exists(downloadPath):
         os.mkdir(downloadPath)
