@@ -12,4 +12,4 @@ def donnload():
     html = requests.get("http://www.pearvideo.com/").text
     html = etree.HTML(html)
     return html
-print(donnload())
+html = donnload()

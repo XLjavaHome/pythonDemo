@@ -5,8 +5,7 @@ from urllib.parse import urlencode
 
 import requests
 
-from xl import 文件
-
+from util import 文件
 GROUP_START = 1
 GROUP_END = 100
 def get_page(offset):

@@ -2,9 +2,7 @@ import os
 
 import requests
 
-from xl import 文件
-
-
+from util import 文件
 def downloadPath():
     # 项目的路径
     projectPath = 文件.get_desktop();
