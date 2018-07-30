@@ -1,4 +1,1 @@
-杩欐槸txt鏂囦欢
-
-鍛靛懙
-2121这是写入的数据这是写入的数据
+'<html xmlns="http://www.w3.org/1999/xhtml"><head></head><body></body></html>'
