@@ -20,4 +20,4 @@ print(msg)
 # 截图
 time.sleep(5)
 # 退出
-driver.quit()
+# driver.quit()
