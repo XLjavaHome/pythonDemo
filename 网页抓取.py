@@ -10,6 +10,7 @@ respson = requests.get(url)
 # 查看对象的属性 dir
 def donnload():
     html = requests.get("http://www.pearvideo.com/").text
+    # todo
     html = etree.HTML(html)
     return html
 html = donnload()

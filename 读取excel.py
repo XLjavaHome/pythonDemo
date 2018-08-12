@@ -1,9 +1,11 @@
 import xlrd
-worksheet = xlrd.open_workbook('resouces/武汉员工_20180705.xlsx')  # 打开excel文件
+workbook = xlrd.open_workbook('resouces/武汉员工_20180705.xlsx')  # 打开excel文件
 
-sheet_names = worksheet.sheet_names()  # 获取excel中所有工作表名
+sheet_names = workbook.sheet_names()  # 获取excel中所有工作表名
 for i in sheet_names:
-    print(i)
+    print(i);
+worksheet1=workbook.sheet_by_index(0)
+print(worksheet1.name)
 # sheet2 = worksheet.sheet_by_name('Sheet2')  # 根据Sheet名获取数据
 #
 # sheet2 = worksheet.sheet_by_index(1)  # 根据索引获取数据，索引为0开始，1表示获取第二张工作表数据

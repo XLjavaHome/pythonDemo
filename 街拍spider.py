@@ -1,11 +1,12 @@
 import os
 from hashlib import md5
 from multiprocessing.pool import Pool
-from urllib.parse import urlencode
 
 import requests
+from urllibDemo.parse import urlencode
 
 from util import 文件
+
 GROUP_START = 1
 GROUP_END = 100
 def get_page(offset):
