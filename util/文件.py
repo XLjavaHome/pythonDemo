@@ -16,9 +16,7 @@ def get_Temp(file='file'):
     if not os.path.exists(temp):
         os.mkdir(temp)
     temp = os.path.join(temp, file)
-    if not os.path.exists(temp):
-        os.mkdir(temp)
-
+    return temp
 
 if __name__ == '__main__':
     # 就是获取当前目录，并组合成新目录
@@ -29,4 +27,4 @@ if __name__ == '__main__':
     # 获取当前文件的绝对路径
     print(__file__)
     # 新建临时文件
-    get_Temp('测试11')
+    temp= get_Temp('测试11')
