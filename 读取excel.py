@@ -3,12 +3,11 @@ import xlrd
 import util.文件
 for file in util.文件.get_excel("D:\Downloads"):
     excelFile = xlrd.open_workbook(file)
-    sheet_names = excelFile.sheet_names()  # 获取excel中所有工作表名
-    print(sheet_names)
+    sheet_names = excelFile.sheet_by_index(0)  # 获取excel中所有工作表名
     # 获取第一个sheet，第一行是日志类型就进行。
     # 如果是BUG修复就获取所对应的需求类型加入一个集合中
     # 如果是开发任务就加入到另一个值中
-    print(file)
+    print(sheet_names.cell(0))
 
 # for i in sheet_names:
 #     print(i);
