@@ -1,11 +1,19 @@
 import xlrd
-workbook = xlrd.open_workbook('resouces/武汉员工_20180705.xlsx')  # 打开excel文件
 
-sheet_names = workbook.sheet_names()  # 获取excel中所有工作表名
-for i in sheet_names:
-    print(i);
-worksheet1=workbook.sheet_by_index(0)
-print(worksheet1.name)
+import util.文件
+for file in util.文件.get_excel("D:\Downloads"):
+    excelFile = xlrd.open_workbook(file)
+    sheet_names = excelFile.sheet_names()  # 获取excel中所有工作表名
+    print(sheet_names)
+    # 获取第一个sheet，第一行是日志类型就进行。
+    # 如果是BUG修复就获取所对应的需求类型加入一个集合中
+    # 如果是开发任务就加入到另一个值中
+    print(file)
+
+# for i in sheet_names:
+#     print(i);
+# worksheet1 = workbook.sheet_by_index(0)
+# print(worksheet1.name)
 # sheet2 = worksheet.sheet_by_name('Sheet2')  # 根据Sheet名获取数据
 #
 # sheet2 = worksheet.sheet_by_index(1)  # 根据索引获取数据，索引为0开始，1表示获取第二张工作表数据
