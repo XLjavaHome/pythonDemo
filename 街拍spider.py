@@ -34,10 +34,8 @@ def get_images(json):
     data = json.get('data')
     if data:
         for item in data:
-            # print(item)
             image_list = item.get('image_list')
             title = item.get('title')
-            # print(image_list)
             if image_list:
                 for image in image_list:
                     yield {
@@ -50,7 +48,6 @@ def save_image(item):
     directroyPath = 文件.get_Temp("街拍");
     if (not os.path.exists(directroyPath)):
         os.mkdir(directroyPath)
-    itemPath = directroyPath + "/" + item.get('title')
     # if not os.path.exists(itemPath):
     #     os.mkdir(itemPath)
     try:

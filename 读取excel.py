@@ -1,23 +1,58 @@
 import xlrd
 
 import util.文件
-for file in util.文件.get_excel("D:\Downloads"):
-    excelFile = xlrd.open_workbook(file)
-    sheet_names = excelFile.sheet_names()  # 获取excel中所有工作表名
-    print(sheet_names)
-    # 获取第一个sheet，第一行是日志类型就进行。
-    # 如果是BUG修复就获取所对应的需求类型加入一个集合中
-    # 如果是开发任务就加入到另一个值中
-    print(file)
 
-# for i in sheet_names:
-#     print(i);
-# worksheet1 = workbook.sheet_by_index(0)
-# print(worksheet1.name)
-# sheet2 = worksheet.sheet_by_name('Sheet2')  # 根据Sheet名获取数据
-#
-# sheet2 = worksheet.sheet_by_index(1)  # 根据索引获取数据，索引为0开始，1表示获取第二张工作表数据
-#
-# rows = sheet2.row_values(3)  # 表示获取Sheet2中第4行数据
-#
-# cols10 = sheet2.col_values(9)  # 表示获取Sheet2中第10列数据（数据保存为list）
+'''
+ 作者：徐立
+ 2018-08-15 11:35
+'''
+num = 1  # 任务
+# 上周计划
+lastTaskSet = set()
+# 类型
+lastbugSet = set()
+# 本周计划
+taskSet = set()
+bugSet = set()
+# 扫描的文件目录
+downloads = "D:\Downloads"
+for file in util.文件.get_excel(downloads):
+    excelFile = xlrd.open_workbook(file)
+    # print(file)
+    # 获取第一个sheet，第一行是日志类型就进行。
+    sheet = excelFile.sheet_by_index(0)
+    maxrow = sheet.nrows
+    # 根据第一行的第一个单元格是日志类型来判断
+    row0 = sheet.row(0)
+    cell0 = sheet.cell(0, 0)
+    #  上周工作内容
+    if (cell0.value == '日志类型'):
+        for row in range(0, maxrow):
+            # 第一列的内容
+            cellType = sheet.cell(row, 0)
+            if cellType.value == 'BUG修复':
+                lastbugSet.add(sheet.cell(row, 5).value)
+            elif cellType.value == '开发任务':
+                lastTaskSet.add(sheet.cell(row, 5).value)
+    # 本周工作计划
+    if cell0.value == 'BUG编号':
+        for row in range(0, maxrow):
+            bugSet.add(sheet.cell(row, 1).value)
+            # 本周工作计划
+    if cell0.value == '任务名称':
+        for row in range(0, maxrow):
+            taskSet.add(sheet.cell(row, 0).value)
+
+print("上周工作内容：")
+if lastTaskSet:
+    print("{0}.开发{1}任务。".format(*[num, '、'.join(lastTaskSet)]))
+    num = num + 1
+if lastbugSet:
+    print("{0}.修复{1}的BUG。".format(*[num, '、'.join(lastbugSet)]))
+print('本周工作计划：')
+num = 1
+if taskSet:
+    print("{0}.开发{1}任务。".format(*[num, '、'.join(taskSet)]))
+    num = num + 1
+if bugSet:
+    print("{0}.修复{1}的BUG。".format(*[num, '、'.join(bugSet)]))
