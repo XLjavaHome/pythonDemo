@@ -28,7 +28,7 @@ def list_dir(path, *ends):
     for i in files:
         for end in ends:
             if (i.endswith(end)):
-                result.add(i)
+                result.add(os.path.join(path, i))
     return result
 def get_excel(path):
     '''
