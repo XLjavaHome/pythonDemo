@@ -1,7 +1,6 @@
 import xlrd
 
 import util.文件
-
 '''
  作者：徐立
  2018-08-15 11:35
@@ -43,16 +42,17 @@ for file in util.文件.get_excel(downloads):
         for row in range(0, maxrow):
             taskSet.add(sheet.cell(row, 0).value)
 
-print("上周工作内容：")
+result = "上周工作内容：\n"
 if lastTaskSet:
-    print("{0}.开发{1}任务。".format(*[num, '、'.join(lastTaskSet)]))
+    result += "{0}.开发{1}任务。\n".format(*[num, '、'.join(lastTaskSet)])
     num = num + 1
 if lastbugSet:
-    print("{0}.修复{1}的BUG。".format(*[num, '、'.join(lastbugSet)]))
-print('本周工作计划：')
+    result += "{0}.修复{1}的BUG。\n".format(*[num, '、'.join(lastbugSet)])
+result += '本周工作计划：\n'
 num = 1
 if taskSet:
-    print("{0}.开发{1}任务。".format(*[num, '、'.join(taskSet)]))
+    result += "{0}.开发{1}任务。\n".format(*[num, '、'.join(taskSet)])
     num = num + 1
 if bugSet:
-    print("{0}.修复{1}的BUG。".format(*[num, '、'.join(bugSet)]))
+    result += "{0}.修复{1}的BUG。\n".format(*[num, '、'.join(bugSet)])
+print(result)
