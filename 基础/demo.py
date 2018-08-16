@@ -1,5 +1,2 @@
-import pickle
-integers = [1, 2, 3, 4, 5]
-f = open("22901.dat", "wb")
-pickle.dump(integers, f)
-f.close()
+groups = ([x * 20 for x in range(2, 50 + 1)])
+print(groups)
