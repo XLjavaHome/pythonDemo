@@ -17,12 +17,10 @@ def get_week(diretory):
     bugSet = set()
     for file in util.文件.get_excel(diretory):
         excelFile = xlrd.open_workbook(file)
-        # print(file)
         # 获取第一个sheet，第一行是日志类型就进行。
         sheet = excelFile.sheet_by_index(0)
         maxrow = sheet.nrows
-        # 根据第一行的第一个单元格是日志类型来判断
-        row0 = sheet.row(0)
+        # 根据第一行的第一个单元格是类型来判断
         cell0 = sheet.cell(0, 0)
         #  上周工作内容
         if (cell0.value == '日志类型'):
@@ -44,17 +42,17 @@ def get_week(diretory):
     num = 1
     result = "上周工作内容：\n"
     if lastTaskSet:
-        result += "{0}.开发{1}任务。\n".format(*[num, '、'.join(lastTaskSet)])
+        result += "{0}.开发任务:{1}。\n".format(*[num, '、'.join(lastTaskSet)])
         num = num + 1
     if lastbugSet:
-        result += "{0}.修复{1}的BUG。\n".format(*[num, '、'.join(lastbugSet)])
+        result += "{0}.BUG修复:{1}。\n".format(*[num, '、'.join(lastbugSet)])
     result += '本周工作计划：\n'
     num = 1
     if taskSet:
-        result += "{0}.开发{1}任务。\n".format(*[num, '、'.join(taskSet)])
+        result += "{0}.开发任务:{1}。\n".format(*[num, '、'.join(taskSet)])
         num = num + 1
     if bugSet:
-        result += "{0}.修复{1}的BUG。\n".format(*[num, '、'.join(bugSet)])
+        result += "{0}.BUG修复:{1}。\n".format(*[num, '、'.join(bugSet)])
     return result
 if __name__ == '__main__':
     # 扫描的文件目录

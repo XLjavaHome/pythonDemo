@@ -10,8 +10,9 @@ def xz():
     filename = tkinter.filedialog.askdirectory()
     if filename != '':
         result = 读取excel.get_week(filename)
+        # 删除所有内容
         text.delete('1.0', 'end')
-        # 复制进剪切板
+        # 将内容复制进剪切板
         pyperclip.copy(result)
         text.insert(1.0, result)
     else:
