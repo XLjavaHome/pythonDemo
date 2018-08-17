@@ -1,21 +1,25 @@
 import tkinter.filedialog
 from tkinter import *
 
+# 剪切板
+import pyperclip
+
 import 读取excel
 root = Tk()
 def xz():
-    # filename = tkinter.filedialog.askopenfilename()
     filename = tkinter.filedialog.askdirectory()
     if filename != '':
         result = 读取excel.get_week(filename)
-        lb.delete('1.0', 'end')
-        lb.insert(1.0, result)
+        text.delete('1.0', 'end')
+        # 复制进剪切板
+        pyperclip.copy(result)
+        text.insert(1.0, result)
     else:
-        lb.config(text="您没有选择任何文件");
-# lb = Label(root, text='')
-lb = Text(root, height=10)
-lb.pack()
-root.title("上周内容、本周计划")
+        text.config(text="您没有选择任何文件");
+text = Text(root, height=10)
+text.pack()
+helpInfo = '自动将内容复制到剪切板'
+root.title("上周工作内容、本周工作计划，{0}".format(helpInfo))
 btn = Button(root, text="请选择excel所在目录", command=xz)
 btn.pack()
 root.mainloop()
