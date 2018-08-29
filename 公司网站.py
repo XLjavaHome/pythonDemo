@@ -1,5 +1,8 @@
 import ssl
 import urllib.request
+
+import chardet
+
 weburl = "https://sirm.sinitek.com/first.jsp"
 webheader = {
     'Accept': 'text/html, application/xhtml+xml, */*',
@@ -12,8 +15,11 @@ webheader = {
 }
 
 context = ssl._create_unverified_context()
+weburl='https://www.baidu.com/'
 req = urllib.request.Request(url=weburl, headers=webheader)
 webPage = urllib.request.urlopen(req, context=context)
+html = webPage.read()
+charset = chardet.detect(html)
 data = webPage.read().decode('utf-8')
 
 print(data)

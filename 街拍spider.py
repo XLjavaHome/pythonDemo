@@ -8,7 +8,7 @@ import requests
 from util import 文件
 
 GROUP_START = 1
-GROUP_END = 100
+GROUP_END = 50
 
 
 def get_page(offset):
