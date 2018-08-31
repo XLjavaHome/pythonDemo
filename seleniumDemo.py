@@ -2,7 +2,7 @@ import time
 
 from selenium import webdriver
 
-import util.文件
+import util.file
 def baidu():
     driver.get("https://www.baidu.com")
     # 必须要下对应的浏览器版本
@@ -12,7 +12,7 @@ def baidu():
     # driver.find_element_by_class_name("button-hook").click()
 def screenshot(driver):
     # 截图,两个一起用会报错
-    tempfile = util.文件.get_tempfile("百度.png")
+    tempfile = util.file.get_tempfile("百度.png")
     driver.save_screenshot(tempfile)
     # tempfile = xl.文件.get_tempfile("百度.jpg")
     # driver.save_screenshot(tempfile)

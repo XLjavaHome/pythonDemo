@@ -1,5 +1,10 @@
 # 生成器
 def squares(n):
+    '''
+    返回一个集合
+    :param n:
+    :return:
+    '''
     i = 1
     for x in range(1,n):
         #

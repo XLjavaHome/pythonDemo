@@ -5,8 +5,7 @@ from urllib.parse import urlencode
 
 import requests
 
-from util import 文件
-
+from util import file
 GROUP_START = 1
 GROUP_END = 50
 
@@ -45,7 +44,7 @@ def get_images(json):
 
 
 def save_image(item):
-    directroyPath = 文件.get_Temp("街拍");
+    directroyPath = file.get_Temp("街拍");
     if (not os.path.exists(directroyPath)):
         os.mkdir(directroyPath)
     # if not os.path.exists(itemPath):

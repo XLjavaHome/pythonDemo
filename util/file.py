@@ -16,9 +16,9 @@ def get_Temp(*file):
         if not os.path.exists(temp):
             os.mkdir(temp)
     return temp
-def list_dir(path, *ends):
+def list_file(path, *ends):
     '''
-    这个列表下的所有文件
+    这个列表下的所有文件,不包括文件夹
     :param path:
     :param ends:
     :return:
@@ -26,9 +26,15 @@ def list_dir(path, *ends):
     files = os.listdir(path)
     result = set()
     for i in files:
-        for end in ends:
-            if (i.endswith(end)):
+        # 文件也包括快捷方式。（文件夹的快捷方式算文件）
+        if os.path.isfile(os.path.join(path, i)):
+            # 结束符没有填的话，添加所有
+            if len(ends) == 0:
                 result.add(os.path.join(path, i))
+            else:
+                for end in ends:
+                    if (i.endswith(end)):
+                        result.add(os.path.join(path, i))
     return result
 def get_excel(path):
     '''
@@ -36,7 +42,7 @@ def get_excel(path):
     :param path:
     :return:
     '''
-    return list_dir(path, 'xls', 'xlsx')
+    return list_file(path, 'xls', 'xlsx')
 if __name__ == '__main__':
     # 就是获取当前目录，并组合成新目录
     getcwd = os.getcwd()
@@ -48,3 +54,5 @@ if __name__ == '__main__':
     # 新建临时文件
     # print(list_dir(get_Temp(), "xlsx"))
     print(get_excel(get_Temp()))
+    file = list_file(r'C:\Users\Administrator\Desktop\1')
+    print(file)

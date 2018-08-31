@@ -1,6 +1,6 @@
 import xlrd
 
-import util.文件
+import util.file
 '''
  作者：徐立
  2018-08-15 11:35
@@ -15,7 +15,7 @@ def get_week(diretory):
     # 本周计划
     taskSet = set()
     bugSet = set()
-    for file in util.文件.get_excel(diretory):
+    for file in util.file.get_excel(diretory):
         excelFile = xlrd.open_workbook(file)
         # 获取第一个sheet，第一行是日志类型就进行。
         sheet = excelFile.sheet_by_index(0)
