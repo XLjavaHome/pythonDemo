@@ -54,5 +54,5 @@ if __name__ == '__main__':
     # 新建临时文件
     # print(list_dir(get_Temp(), "xlsx"))
     print(get_excel(get_Temp()))
-    file = list_file(r'C:\Users\Administrator\Desktop\1')
-    print(file)
+    # file = list_file(r'C:\Users\Administrator\Desktop\1')
+    # print(file)
