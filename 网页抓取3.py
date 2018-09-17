@@ -10,5 +10,6 @@ cookies = {}
 for line in cookie_str.split(';'):
     key, value = line.split('=', 1)
     cookies[key] = value
+cookies={}
 respson = requests.get(url, headers=header, cookies=cookies)
 print(respson.text)

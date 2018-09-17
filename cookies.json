@@ -1,0 +1,58 @@
+{
+  "cookies": [
+    {
+      "name": "JSESSIONID",
+      "value": "89436574AC3609F843ED0EE6A94174AB"
+    },
+    {
+      "name": "password",
+      "value": "D1MjkURCfzw_"
+    },
+    {
+      "name": "rememberme",
+      "value": "true"
+    },
+    {
+      "name": "username",
+      "value": "nvtCeiOx73A_"
+    },
+    {
+      "name": "validation",
+      "value": "0e84d732f7422295351bf1dc05d4afb1"
+    }
+  ],
+  "headers": [
+    {
+      "name": "Accept",
+      "value": "*/*"
+    },
+    {
+      "name": "Accept-Encoding",
+      "value": "gzip, deflate"
+    },
+    {
+      "name": "Accept-Language",
+      "value": "zh-CN"
+    },
+    {
+      "name": "Cache-Control",
+      "value": "no-cache"
+    },
+    {
+      "name": "Connection",
+      "value": "Keep-Alive"
+    },
+    {
+      "name": "Cookie",
+      "value": "JSESSIONID=89436574AC3609F843ED0EE6A94174AB; username=nvtCeiOx73A_; password=D1MjkURCfzw_; rememberme=true; validation=0e84d732f7422295351bf1dc05d4afb1"
+    },
+    {
+      "name": "Host",
+      "value": "sinitek2.3322.org:8126"
+    },
+    {
+      "name": "User-Agent",
+      "value": "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko Core/1.63.6726.400 QQBrowser/10.2.2265.400"
+    }
+  ]
+}
