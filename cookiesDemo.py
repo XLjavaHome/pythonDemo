@@ -1,10 +1,9 @@
 # todo
-#!/usr/bin/env python
+# !/usr/bin/env python
 # coding=utf-8
 # 简单的验证登录以及登陆后获取想要的页面内容
 import requests
 from lxml import etree
-
 # 这个是网站在登录的时候验证密码的界面，一般不是登录的界面，需要抓包获取到
 headUrl = "http://sinitek2.3322.org:8126/"
 post_url = "%sxwiki/bin/loginsubmit/XWiki/XWikiLogin" % headUrl
@@ -47,3 +46,4 @@ headUrl = (
     headUrl + 'xwiki/bin/get/Main/WebHome?outputSyntax=plain&sheet=XWiki.DocumentTree&showAttachments=false&showTranslations=false&&data=children&id=document%3Axwiki%3AMain.WebHome')
 headHtml = session.get(headUrl, headers=headers)
 headerG = etree.HTML(headHtml.text)
+print(headHtml.text)

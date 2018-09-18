@@ -1,4 +1,5 @@
 # 将字符串中第一个字母大写capitalize
+from base.string.String占位符 import url
 print('ayushi'.capitalize())
 print('@ayushi'.capitalize())
 
@@ -27,8 +28,6 @@ print("和asa111"[0].isalpha())
 
 print(r'\\n')
 print('\\n')
-# %s占位符 拼接字符串
-url = 'http://www.%shao123.com' % '这是占位符'
 print(url)
 # replace替换
 result = '22nbsp;111'.replace('nbsp;', "替换")
