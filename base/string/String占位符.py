@@ -26,5 +26,8 @@ format格式化
 print('My name is {0}, age is {1}!'.format('yiifaa', 32))
 #  格式化元组
 print('My name is {0}, age is {1}!'.format(*['yiifaa', 32]))
+lastbugSet = set()
+lastbugSet.add("helloWorld")
+print("{0}.修复{1}的BUG。（{2}个BUG）\n".format(*[2, '、'.join(lastbugSet), 5]))
 # 通过关键字
 print('My name is {username}, age is {age}!'.format(age=32, username='yiifaa'))
