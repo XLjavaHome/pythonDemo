@@ -1,8 +1,8 @@
 import os
 
 from util import file
+from util import regex
 from util import 拼音
-from util import 正则
 if __name__ == '__main__':
     deskdop = file.get_desktop()
     # deskdop = r'C:\Users\Administrator\Desktop\1'
@@ -12,7 +12,7 @@ if __name__ == '__main__':
         # 第一个文件名不为字符的话，改为字母加上当前文件名
         # 文件名
         file = os.path.basename(filePath)
-        if not 正则.isLetters(file[0]):
+        if not regex.isLetters(file[0]):
             initia = 拼音.getPinyin(file[0])
             try:
                 os.rename(filePath, os.path.join(os.path.dirname(filePath), initia + file))

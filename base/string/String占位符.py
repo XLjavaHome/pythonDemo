@@ -12,7 +12,7 @@ r = (s2 - s1) / s2 * 100
 %s字符串
 二个百分号输出1个百分号
 '''
-print('小明提高了%.1f %%' % r)
+print('小明提高了%.1f %%,%s' % (r, '测试多个占位符'))
 print('小明提高了%s%%' % r)
 
 '''
@@ -22,9 +22,9 @@ format格式化
 'My name is {0[username]}, age is {0[age]}!'.format({'username': 'yiifaa', 'age': 32})
 # 注意!r的用法，会直接输出字符串格式，携带单引号
 'My name is {0[username]!r}, age is {0[age]}!'.format({'username': 'yiifaa', 'age': 32})
-# 按参数顺序进行格式化
+# 通过下标
 print('My name is {0}, age is {1}!'.format('yiifaa', 32))
 #  格式化元组
 print('My name is {0}, age is {1}!'.format(*['yiifaa', 32]))
-#   将函数参数转换为字典,不存在顺序
+# 通过关键字
 print('My name is {username}, age is {age}!'.format(age=32, username='yiifaa'))

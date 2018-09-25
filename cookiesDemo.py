@@ -5,8 +5,8 @@
 import requests
 from lxml import etree
 # 这个是网站在登录的时候验证密码的界面，一般不是登录的界面，需要抓包获取到
-headUrl = "http://sinitek2.3322.org:8126/"
-post_url = "%sxwiki/bin/loginsubmit/XWiki/XWikiLogin" % headUrl
+headUrl = "http://sinitek2.3322.org:8126"
+post_url = "%s/xwiki/bin/loginsubmit/XWiki/XWikiLogin" % headUrl
 username = 'guest'
 password = 'sinitek'
 session = requests.session()
@@ -20,6 +20,7 @@ data = {
     "j_username": username,
     "j_password": password
 }
+
 try:
     login_page = session.post(post_url, data=data, headers=headers)
     if "loginerror" in login_page.text:
@@ -28,22 +29,19 @@ try:
         print("欢迎您'%s'，成功登陆POS管理系统！" % username)
 except Exception as e:
     print(e)
-
+def openUrl(url):
+    item_list = session.post(url, headers=headers)
+    html = etree.HTML(item_list.text)
+    return html
+openUrl(
+    'http://sinitek2.3322.org:8126/xwiki/bin/view/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/')
 # 需要登录后才能访问的页面网址
-url = (
-    headUrl + "xwiki/bin/login/XWiki/XWikiLogin?srid=2ShyM6Se&xredirect=%2Fxwiki%2Fbin%2Fview%2FMain%2F%3Fsrid%3D2ShyM6Se")
-item_list = session.post(url, headers=headers)
-html = etree.HTML(item_list.text)
-# //*[@id="document:xwiki:Blog.如何给Android手机刷机并安装Xposed框架.WebHome_anchor"]
-Total_list = html.xpath('//a[@class="typePage type"]/@href')
-for i in Total_list:
-    body = session.post(headUrl + i, headers=headers)
-    bodyEtree = etree.HTML(body.text)
-    # bodyText = bodyEtree.xpath("//div[@class='main']/text()")
+# html = openUrl('http://sinitek2.3322.org:8126/xwiki/bin/view/Main/?srid=TK0mripx')
+# Total_list = html.xpath('//a[@class="typePage type"]')
+# for i in Total_list:
+#     href属性,内容
+# ahref = headUrl + i.attrib.get('href')
+# print("%s:%s" % (i.text, ahref))
+# ahtml = openUrl(ahref)
+# bodyText= ahtml.xpath('//*[@id="body"]')
     # print(bodyText)
-# 导航的url
-headUrl = (
-    headUrl + 'xwiki/bin/get/Main/WebHome?outputSyntax=plain&sheet=XWiki.DocumentTree&showAttachments=false&showTranslations=false&&data=children&id=document%3Axwiki%3AMain.WebHome')
-headHtml = session.get(headUrl, headers=headers)
-headerG = etree.HTML(headHtml.text)
-print(headHtml.text)

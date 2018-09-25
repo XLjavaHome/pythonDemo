@@ -1,1 +1,704 @@
-'https://www.toutiao.com/search_content/?offset=580&format=json&keyword=%E8%A1%97%E6%8B%8D&autoload=true&count=20&cur_tab=3&from=gallery'
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh" xml:lang="zh"
+        data-xwiki-reference="xwiki:Main.计总办.CSRF功能增强.WebHome"
+    data-xwiki-document="Main.计总办.CSRF功能增强.WebHome"
+    data-xwiki-wiki="xwiki"
+    data-xwiki-space="Main.计总办.CSRF功能增强"
+    data-xwiki-page="WebHome"
+    data-xwiki-version="3.1"
+    data-xwiki-rest-url="/xwiki/rest/wikis/xwiki/spaces/Main/spaces/%E8%AE%A1%E6%80%BB%E5%8A%9E/spaces/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/pages/WebHome"
+    data-xwiki-form-token="ve9qlMdSaeZkxMy0MrbFbQ"
+>
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>XWiki - Main.计总办.CSRF功能增强 - CSRF功能增强</title>
+                                    <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="shortcut icon" href="/xwiki/resources/icons/xwiki/favicon.ico" />
+        <link rel="icon" href="/xwiki/resources/icons/xwiki/favicon16.png" type="image/png" />
+        <link rel="icon" href="/xwiki/resources/icons/xwiki/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/xwiki/resources/icons/xwiki/favicon144.png" />
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/xwiki/bin/edit/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/WebHome" />
+                    <link rel="canonical" href="/xwiki/bin/view/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/" />
+                <meta name="gwt:property" content="locale=zh" />
+                                    <link href="/xwiki/webjars/wiki%3Axwiki/bootstrap-switch/3.3.2/css/bootstrap3/bootstrap-switch.min.css" type='text/css' rel='stylesheet'/><link href="/xwiki/webjars/wiki%3Axwiki/xwiki-platform-tree-webjar/9.1.2/tree.min.css?evaluate=true" type='text/css' rel='stylesheet'/>
+    <link href="/xwiki/webjars/wiki%3Axwiki/drawer/2.4.0/css/drawer.min.css" rel="stylesheet" type="text/css" />
+
+
+<link href="/xwiki/bin/skin/skins/flamingo/style.css?skin=flamingo&#38;colorTheme=xwiki%3AColorThemes.DefaultColorTheme" rel="stylesheet" type="text/css" media="all" />
+<link href="/xwiki/bin/skin/skins/flamingo/print.css?skin=flamingo&#38;colorTheme=xwiki%3AColorThemes.DefaultColorTheme" rel="stylesheet" type="text/css" media="print" />
+<!--[if IE]>
+  <link href="/xwiki/bin/skin/skins/flamingo/ie-all.css?skin=flamingo&#38;colorTheme=xwiki%3AColorThemes.DefaultColorTheme" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <link rel='stylesheet' type='text/css' href='/xwiki/bin/skin/resources/css/xwiki-min.css?colorTheme=ColorThemes.DefaultColorTheme&amp;language=zh'/><link rel='stylesheet' type='text/css' href='/xwiki/bin/skin/resources/uicomponents/search/searchSuggest.css'/><link rel='stylesheet' type='text/css' href='/xwiki/bin/skin/resources/uicomponents/suggest/suggestPicker.css'/><link rel='stylesheet' type='text/css' href='/xwiki/bin/skin/resources/uicomponents/widgets/userpicker/userPicker.css'/><link rel='stylesheet' type='text/css' href='/xwiki/bin/skin/resources/uicomponents/viewers/tags.css?colorTheme=ColorThemes.DefaultColorTheme'/><link rel='stylesheet' type='text/css' href='/xwiki/bin/skin/resources/uicomponents/viewers/comments.css'/><link rel='stylesheet' type='text/css' href='/xwiki/bin/skin/resources/uicomponents/widgets/upload.css'/><link rel='stylesheet' type='text/css' href='/xwiki/bin/skin/resources/js/xwiki/viewers/attachments.css'/><link rel='stylesheet' type='text/css' href='/xwiki/bin/skin/resources/uicomponents/pagination/pagination.css'/>
+    <link rel="stylesheet" type="text/css" href="/xwiki/bin/ssx/AnnotationCode/Style?language=zh&amp;docVersion=1.1" /><link rel="stylesheet" type="text/css" href="/xwiki/bin/ssx/Tour/HomepageTour/WebHome?language=zh&amp;docVersion=1.1" /><link rel="stylesheet" type="text/css" href="/xwiki/bin/ssx/AnnotationCode/Settings?language=zh&amp;docVersion=1.1" /><link rel="stylesheet" type="text/css" href="/xwiki/bin/ssx/XWiki/WatchListNotificationsUIX?language=zh&amp;docVersion=1.1" /><link rel="stylesheet" type="text/css" href="/xwiki/bin/ssx/IconThemes/FontAwesome?language=zh&amp;docVersion=1.1" /><link rel="stylesheet" type="text/css" href="/xwiki/bin/ssx/XWiki/SharePage?language=zh&amp;docVersion=1.1" /><link rel="stylesheet" type="text/css" href="/xwiki/bin/ssx/Panels/Applications?language=zh&amp;docVersion=1.1" />
+
+    <script type="text/javascript" src="/xwiki/webjars/wiki%3Axwiki/requirejs/2.2.0/require.min.js?r=1"></script>
+
+    <script type='text/javascript' src='/xwiki/resources/js/prototype/prototype.js'></script>
+<script type='text/javascript' src='/xwiki/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/xwiki/bin/skin/resources/js/xwiki/xwiki-min.js?defer=false&amp;language=zh'></script>
+<script type='text/javascript' src='/xwiki/bin/skin/skins/flamingo/flamingo.min.js?language=zh' defer='defer'></script>
+<script type='text/javascript' src='/xwiki/bin/skin/resources/uicomponents/search/searchSuggest.js?h=1943377122' defer='defer'></script>
+<script type='text/javascript' src='/xwiki/bin/skin/resources/uicomponents/hierarchy/hierarchy.js' defer='defer'></script>
+<script type='text/javascript' src='/xwiki/bin/skin/resources/uicomponents/widgets/tree.min.js' defer='defer'></script>
+<script type='text/javascript' src='/xwiki/bin/skin/resources/uicomponents/suggest/suggestPicker.js' defer='defer'></script>
+<script type='text/javascript' src='/xwiki/bin/skin/resources/uicomponents/widgets/userpicker/userPicker.js' defer='defer'></script>
+<script type='text/javascript' src='/xwiki/bin/skin/resources/uicomponents/exporter/exporter.js' defer='defer'></script>
+<script type='text/javascript' src='/xwiki/bin/skin/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/xwiki/bin/skin/resources/uicomponents/viewers/comments.js?language=zh' defer='defer'></script>
+<script type='text/javascript' src='/xwiki/bin/skin/resources/uicomponents/widgets/upload.js?language=zh' defer='defer'></script>
+<script type='text/javascript' src='/xwiki/bin/skin/resources/js/xwiki/viewers/attachments.js?language=zh' defer='defer'></script>
+
+    <script type='text/javascript' src='/xwiki/bin/jsx/TourCode/TourJS?language=zh&amp;docVersion=1.1' defer='defer'></script>
+<script type='text/javascript' src='/xwiki/bin/jsx/AnnotationCode/Settings?language=zh&amp;docVersion=1.1' defer='defer'></script>
+<script type='text/javascript' src='/xwiki/bin/jsx/AnnotationCode/Script?language=zh&amp;docVersion=1.1' defer='defer'></script>
+<script type='text/javascript' src='/xwiki/bin/jsx/XWiki/WatchListNotificationsUIX?language=zh&amp;docVersion=1.1' defer='defer'></script>
+<script type='text/javascript' src='/xwiki/bin/jsx/XWiki/QuickSearchUIX?language=zh&amp;docVersion=1.1' defer='defer'></script>
+<script type='text/javascript' src='/xwiki/bin/jsx/IconThemes/FontAwesome?language=zh&amp;docVersion=1.1' defer='defer'></script>
+<script type='text/javascript' src='/xwiki/bin/jsx/XWiki/SharePage?language=zh&amp;docVersion=1.1' defer='defer'></script>
+<script type='text/javascript' src='/xwiki/bin/jsx/Panels/Applications?language=zh&amp;docVersion=1.1' defer='defer'></script>
+
+
+<script type="text/javascript" src="/xwiki/resources/js/xwiki/compatibility.js" defer="defer"></script>
+<script type="text/javascript" src="/xwiki/resources/js/xwiki/markerScript.js" defer="defer"></script>
+<!--[if lt IE 9]>
+    <script src="/xwiki/webjars/wiki%3Axwiki/html5shiv/3.7.2/html5shiv.min.js?r=1"></script>
+    <script type="text/javascript" src="/xwiki/webjars/wiki%3Axwiki/respond/1.4.2/dest/respond.min.js?r=1" defer="defer"></script>
+<![endif]-->
+<script type="text/javascript">
+// <![CDATA[
+require.config({
+  paths: {
+    'jquery': '/xwiki/webjars/wiki%3Axwiki/jquery/2.2.2/jquery.min.js?r=1',
+    'bootstrap': '/xwiki/webjars/wiki%3Axwiki/bootstrap/3.3.7-1/js/bootstrap.min.js?r=1',
+    'xwiki-meta': '/xwiki/resources/js/xwiki/meta',
+    'xwiki-events-bridge': "/xwiki/resources/js/xwiki/eventsBridge",
+    'iscroll': '/xwiki/webjars/wiki%3Axwiki/iscroll/5.1.3/build/iscroll-lite.js?r=1',
+    'drawer': '/xwiki/webjars/wiki%3Axwiki/drawer/2.4.0/js/jquery.drawer.min.js?r=1',
+    'deferred': "/xwiki/resources/uicomponents/require/deferred"
+  },
+  shim: {
+    'bootstrap' : ['jquery'],
+    'drawer': ['jquery', 'iscroll']
+  },
+    map: {
+    '*': {
+      'jquery': 'jQueryNoConflict'
+    },
+    'jQueryNoConflict': {
+      'jquery': 'jquery'
+    },
+  }
+});
+define('jQueryNoConflict', ['jquery'], function ($) {
+    return $.noConflict();
+});
+if (Prototype.BrowserFeatures.ElementExtensions) {
+  require(['jquery', 'bootstrap'], function ($) {
+    // Fix incompatibilities between BootStrap and Prototype
+    var disablePrototypeJS = function (method, pluginsToDisable) {
+      var handler = function (event) {
+        event.target[method] = undefined;
+        setTimeout(function () {
+            delete event.target[method];
+        }, 0);
+      };
+      pluginsToDisable.each(function (plugin) {
+          $(window).on(method + '.bs.' + plugin, handler);
+      });
+    },
+    pluginsToDisable = ['collapse', 'dropdown', 'modal', 'tooltip', 'tab', 'popover'];
+    disablePrototypeJS('show', pluginsToDisable);
+    disablePrototypeJS('hide', pluginsToDisable);
+  });
+}
+require(['jquery', 'drawer'], function($) {
+  $(document).ready(function() {
+    $('body').drawer();
+  });
+});
+XWiki.webapppath = "xwiki/";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "/xwiki";
+XWiki.mainWiki = "xwiki";
+// Deprecated: replaced by meta data in the HTML element
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Main.\u8BA1\u603B\u529E.CSRF\u529F\u80FD\u589E\u5F3A";
+XWiki.currentPage = "WebHome";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.skin = 'flamingo';
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.1";
+XWiki.docvariant = "";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = true;
+XWiki.hasBackupPackImportRights = false;
+XWiki.hasRenderer = true;
+window.docviewurl = "/xwiki/bin/view/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/";
+window.docediturl = "/xwiki/bin/edit/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/WebHome";
+window.docsaveurl = "/xwiki/bin/save/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/WebHome";
+window.docgeturl = "/xwiki/bin/get/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/WebHome";
+// ]]>
+</script>
+
+  </head>
+  <body id="body" class="skin-flamingo wiki-xwiki space-Main.计总办.CSRF功能增强 viewbody hideright  panel-left-width-Medium panel-right-width-Medium drawer drawer-right drawer-close">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <nav class="navbar navbar-default actionmenu">
+    <div class="container-fluid">
+            <div class="navbar-header">
+                      <div id="companylogo">
+  <a href="/xwiki/bin/view/Main/" title="Home" rel="home" class="navbar-brand">
+    <img src="/xwiki/skins/flamingo/logo.svg" alt="Wiki Logo"/>
+  </a>
+</div>
+
+              </div>
+            <div id="xwikimainmenu">
+
+          <ul class="nav navbar-nav navbar-left">
+      <li class="divider" role="separator"></li>
+              </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+        <li>
+    <a class="icon-navbar drawer-toggle" id="tmDrawerActivator" title="Drawer"><span class="sr-only">Toggle navigation</span><span class="glyphicon glyphicon-menu-hamburger"></span></a>
+  </li>
+                  <li class="navbar-avatar">
+<a href="/xwiki/bin/view/XWiki/guest" class="icon-navbar">
+<span class="sr-only">用户资料</span>
+                                <img class='avatar avatar_50' src='/xwiki/bin/skin/resources/icons/xwiki/noavatar.png' alt='guest' title='guest'/></a>
+</li>
+
+<li class="dropdown" id="tmNotifications">
+<a class="icon-navbar dropdown-toggle" data-toggle="dropdown" role="button" title="查看列表"><span class="sr-only">Toggle navigation</span><span class="glyphicon glyphicon-bell"></span></a>
+<ul class="dropdown-menu">
+ <li class="notifications-watchlist-item">
+<pre><input type="checkbox" id="tmWatchDocument" /> <input type="checkbox" id="tmWatchSpace" /> <input type="checkbox" id="tmWatchWiki" /></pre>
+</li>
+
+</ul>
+</li>
+                 <li>
+<form class="navbar-form globalsearch globalsearch-close form-inline" id="globalsearch" action="/xwiki/bin/view/Main/Search">
+<input type="text" name="text" placeholder="查找中......" id="headerglobalsearchinput" />
+<button type="submit" class="btn" title="搜索"><span class="glyphicon glyphicon-search"></span></button>
+</form>
+</li>
+            </ul>
+
+          </div>    </div>   </nav>
+
+
+
+
+
+
+
+<div class="drawer-main drawer-default" id="tmDrawer">
+  <nav class="drawer-nav">
+
+                <div class="drawer-brand clearfix">
+      <a href="/xwiki/bin/view/XWiki/guest">
+                                    <img class='avatar avatar_120' src='/xwiki/bin/skin/resources/icons/xwiki/noavatar.png' alt='guest' title='guest'/>      </a>
+      <div class="brand-links">
+                  <a href="/xwiki/bin/view/XWiki/guest" class="brand-user" id="tmUser">guest</a>
+          <a href="/xwiki/bin/logout/XWiki/XWikiLogout?xredirect=%2Fxwiki%2Fbin%2Fview%2FMain%2F%25E8%25AE%25A1%25E6%2580%25BB%25E5%258A%259E%2FCSRF%25E5%258A%259F%25E8%2583%25BD%25E5%25A2%259E%25E5%25BC%25BA%2F" id="tmLogout"><span class="glyphicon glyphicon-log-out"></span> 退出</a>
+                                                          </div>
+    </div>
+
+                <ul class="drawer-menu">
+                                <li class="drawer-menu-item drawer-category-header"><hr class="hidden"/>Home</li>
+
+
+
+
+
+
+
+  <li class="drawer-menu-item">
+    <a href="/xwiki/bin/view/Main/AllDocs" id="tmWikiDocumentIndex">
+      <div class="drawer-menu-item-icon">
+        <span class="glyphicon glyphicon-book"></span>
+      </div>
+      <div class="drawer-menu-item-text">Page Index</div>
+    </a>
+  </li>
+
+
+
+
+
+
+  <li class="drawer-menu-item">
+    <a href="/xwiki/bin/view/Main/UserDirectory" id="tmMainUserIndex">
+      <div class="drawer-menu-item-icon">
+        <span class="glyphicon glyphicon-user"></span>
+      </div>
+      <div class="drawer-menu-item-text">User Index</div>
+    </a>
+  </li>
+
+
+
+
+
+
+  <li class="drawer-menu-item">
+    <a href="/xwiki/bin/view/Applications/" id="tmMainApplicationIndex">
+      <div class="drawer-menu-item-icon">
+        <span class="glyphicon glyphicon-th"></span>
+      </div>
+      <div class="drawer-menu-item-text">Application Index</div>
+    </a>
+  </li>
+                                                    <li class="drawer-menu-item drawer-category-header"><hr class="hidden"/>Global</li>
+
+
+
+
+
+
+
+  <li class="drawer-menu-item">
+    <a href="/xwiki/bin/view/WikiManager/" >
+      <div class="drawer-menu-item-icon">
+        <span class="glyphicon glyphicon-list"></span>
+      </div>
+      <div class="drawer-menu-item-text">Wiki Index</div>
+    </a>
+  </li>
+
+          </ul>
+  </nav>
+</div>
+
+
+
+
+
+  </div>
+ <div id="headerglobal">
+  <div id="globallinks">
+  </div>   <div class="clearfloats"></div>
+
+  </div>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn">
+
+
+  <div class="main">
+  <div id="mainContentArea">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                <ol id="hierarchy" class="breadcrumb breadcrumb-expandable" data-entity='Main.计总办.CSRF功能增强.WebHome' data-id='hierarchy' data-limit='5' data-treenavigation='true' data-entities='&#123;Space xwiki:Main.计总办.CSRF功能增强=Main.计总办.CSRF功能增强.WebHome}'><li
+
+
+
+
+                            class="wiki dropdown"><a href="/xwiki/bin/view/Main/"
+        ><img src="/xwiki/resources/icons/silk/house.png" alt="Icon" /></a><span class='dropdown-toggle' data-toggle='dropdown'><img src="/xwiki/resources/icons/silk/bullet_arrow_down.png" alt="Icon" /></span><div class='dropdown-menu'>                                                                                                                                                      <div                                                                               class = "breadcrumb-tree"              data-responsive = "true"              data-url = "/xwiki/bin/get/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/WebHome?outputSyntax=plain&#38;sheet=XWiki.DocumentTree&#38;limit=10&#38;showTranslations=false&#38;limit=10"              data-dragAndDrop = "false"              data-contextMenu = "false"              data-icons = "true"              data-edges = "true"              data-checkboxes = "false"              data-openTo = "document:xwiki:Main.计总办.CSRF功能增强.WebHome"              data-finder = "false"  ></div>
+</div></li><li
+
+
+
+                            class="space dropdown"><a href="/xwiki/bin/view/Main/"
+        >欢迎进入Wiki</a><span class='dropdown-toggle' data-toggle='dropdown'><img src="/xwiki/resources/icons/silk/bullet_arrow_down.png" alt="Icon" /></span><div class='dropdown-menu'>                                                                                                                                                          <div                                                                                     class = "breadcrumb-tree"              data-responsive = "true"              data-url = "/xwiki/bin/get/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/WebHome?outputSyntax=plain&#38;sheet=XWiki.DocumentTree&#38;limit=10&#38;root=wiki%3Axwiki&#38;showTranslations=false&#38;limit=10&#38;root=wiki%3Axwiki"              data-dragAndDrop = "false"              data-contextMenu = "false"              data-icons = "true"              data-edges = "true"              data-checkboxes = "false"              data-openTo = "document:xwiki:Main.WebHome"              data-finder = "false"  ></div>
+</div></li><li
+
+
+
+                            class="space dropdown"><a href="/xwiki/bin/view/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/"
+        >计总办</a><span class='dropdown-toggle' data-toggle='dropdown'><img src="/xwiki/resources/icons/silk/bullet_arrow_down.png" alt="Icon" /></span><div class='dropdown-menu'>                                                                                                                                                          <div                                                                                     class = "breadcrumb-tree"              data-responsive = "true"              data-url = "/xwiki/bin/get/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/WebHome?outputSyntax=plain&#38;sheet=XWiki.DocumentTree&#38;limit=10&#38;root=document%3Axwiki%3AMain.WebHome&#38;showTranslations=false&#38;limit=10&#38;root=document%3Axwiki%3AMain.WebHome"              data-dragAndDrop = "false"              data-contextMenu = "false"              data-icons = "true"              data-edges = "true"              data-checkboxes = "false"              data-openTo = "document:xwiki:Main.计总办.WebHome"              data-finder = "false"  ></div>
+</div></li><li
+
+
+
+                                                  class="active space dropdown"><a href="/xwiki/bin/view/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/"
+        >CSRF功能增强</a><span class='dropdown-toggle' data-toggle='dropdown'><img src="/xwiki/resources/icons/silk/bullet_arrow_down.png" alt="Icon" /></span><div class='dropdown-menu'>                                                                                                                                                          <div                                                                                     class = "breadcrumb-tree"              data-responsive = "true"              data-url = "/xwiki/bin/get/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/WebHome?outputSyntax=plain&#38;sheet=XWiki.DocumentTree&#38;limit=10&#38;root=document%3Axwiki%3AMain.%E8%AE%A1%E6%80%BB%E5%8A%9E.WebHome&#38;showTranslations=false&#38;limit=10&#38;root=document%3Axwiki%3AMain.%E8%AE%A1%E6%80%BB%E5%8A%9E.WebHome"              data-dragAndDrop = "false"              data-contextMenu = "false"              data-icons = "true"              data-edges = "true"              data-checkboxes = "false"              data-openTo = "document:xwiki:Main.计总办.CSRF功能增强.WebHome"              data-finder = "false"  ></div>
+</div>      </li></ol>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="xcontent">
+  <div class="row document-header">
+  <div class="document-info col-xs-12 col-md-7">
+                    <div id="document-title"><h1>CSRF功能增强</h1></div>
+          <div class="xdocLastModification">
+        在2018/01/25 17:52上被<span class="wikilink"><a href="/xwiki/bin/view/XWiki/jfchen_1">诫孚 陈</a></span>修改
+      </div>
+      </div>
+      <div class="document-menu col-xs-12 col-md-5">
+
+
+<div id="contentmenu" class="pull-right actionmenu">
+
+                                              <div class="dropdown" id="tmAdminActions">
+      <a href="" data-toggle="dropdown" role="button" title="动作"><span class="glyphicon glyphicon-cog"></span></a>
+      <ul class="dropdown-menu">
+
+                      <li class=""><a href="/xwiki/bin/view/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/?xpage=copy" id="tmActionCopy" title="复制" ><span class="glyphicon glyphicon-share"></span> 复制</a></li>
+
+
+      </ul>
+    </div>
+
+
+
+                            <div class="dropdown" id="tmMoreActions">
+      <a href="" data-toggle="dropdown" role="button" title="更多动作"><span class="glyphicon glyphicon-option-vertical"></span></a>
+      <ul class="dropdown-menu">
+                                                      <li class=""><a href="" id="tmExport" title="导出" data-toggle="modal" data-target="#exportModal"><span class="glyphicon glyphicon-download-alt"></span> 导出</a></li>
+
+
+    <li class="tme"><a href="#Comments" id="tmAnnotationsTrigger" title="注释" ><span class="glyphicon glyphicon-edit"></span> 注释</a></li>
+                                <li class=""><a href="/xwiki/bin/view/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/?xpage=print" id="tmPrintPreview" title="打印预览" ><span class="glyphicon glyphicon-print"></span> 打印预览</a></li>
+
+                                <li class=""><a href="/xwiki/bin/view/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/?viewer=code" id="tmViewSource" title="察看源码" ><span class="glyphicon glyphicon-search"></span> 察看源码</a></li>
+
+                                  <li class=""><a href="/xwiki/bin/view/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/?viewer=share" id="tmActionShare" title="Share by email" ><span class="glyphicon glyphicon-envelope"></span> Share by email</a></li>
+
+                                                  <li class="divider" role="separator"></li>
+
+                  <li class=""><a href="/xwiki/bin/view/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/?viewer=children"  title="子" ><span class="glyphicon glyphicon-folder-open"></span> 子</a></li>
+                  <li class=""><a href="/xwiki/bin/view/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/?viewer=comments"  title="评论" ><span class="glyphicon glyphicon-comment"></span> 评论</a></li>
+                  <li class=""><a href="/xwiki/bin/view/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/?viewer=annotations"  title="Annotations" ><span class="glyphicon glyphicon-pushpin"></span> Annotations</a></li>
+                    <li class=""><a href="/xwiki/bin/view/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/?viewer=attachments"  title="附件 (2)" ><span class="glyphicon glyphicon-paperclip"></span> 附件 (2)</a></li>
+                  <li class=""><a href="/xwiki/bin/view/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/?viewer=history"  title="记录" ><span class="glyphicon glyphicon-time"></span> 记录</a></li>
+                  <li class=""><a href="/xwiki/bin/view/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/?viewer=information"  title="信息" ><span class="glyphicon glyphicon-info-sign"></span> 信息</a></li>
+
+
+
+      </ul>
+    </div>
+
+
+        <div class="modal fade text-left" id="exportModal" tabindex="-1" role="dialog" aria-labelledby="exportModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="exportModalLabel">导出</h4>
+        </div>
+        <div class="modal-body">
+          <div class="panel-group" id="exportModelAccordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="exportModalHeadingOffice">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#exportModelAccordion" href="#exportModelOfficeCollapse" aria-expanded="true" aria-controls="exportModelOfficeCollapse">
+          Office Formats
+        </a>
+      </h4>
+    </div>
+    <div id="exportModelOfficeCollapse" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="exportModalHeadingOffice">
+      <div class="panel-body">
+        <a href="/xwiki/bin/view/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/?xpage=pdfoptions&amp;qs=" class="btn btn-primary">以PDF格式导出</a>
+              </div>
+    </div>
+  </div>
+              <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="exportModalHeadingOther">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#exportModelAccordion" href="#exportModelOtherCollapse" aria-expanded="false" aria-controls="exportModelOtherCollapse">
+          Other Formats
+        </a>
+      </h4>
+    </div>
+    <div id="exportModelOtherCollapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="exportModalHeadingOther">
+      <div class="panel-body">
+                  <div class="row">
+            <div class="col-xs-6">
+              <p>Select the pages to export:</p>
+            </div>
+            <div class="col-xs-6">
+              <p class="text-right"><a href="#" class="tree_select_all">select all</a> / <a href="#" class="tree_select_none">none</a></p>
+            </div>
+          </div>
+          <div class="exportModalTreeContainer">
+                                                                                                                                                                                      <div                                                                                       class = "xtree jstree-no-links"              data-responsive = "true"              data-url = "/xwiki/bin/get/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/WebHome?outputSyntax=plain&#38;sheet=XWiki.DocumentTree&#38;root=document%3Axwiki%3AMain.%E8%AE%A1%E6%80%BB%E5%8A%9E.CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA.WebHome&#38;showAttachments=false&#38;showRoot=true&#38;showTranslations=false&#38;root=document%3Axwiki%3AMain.%E8%AE%A1%E6%80%BB%E5%8A%9E.CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA.WebHome&#38;showRoot=true"              data-dragAndDrop = "true"              data-contextMenu = "true"              data-icons = "true"              data-edges = "true"              data-checkboxes = "true"              data-openTo = ""              data-finder = "false"  ></div>
+          </div>
+                <a href="/xwiki/bin/export/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/WebHome?format=html" class="btn btn-primary">以HTML格式导出</a>
+              </div>
+    </div>
+  </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+<hr/>
+
+
+        <div class="row">
+    <div id="xwikicontent" class="col-xs-12">
+              <h1 id="HCSRF589E5F3A"><span><strong>CSRF增强</strong></span></h1><p><strong>注意：配置该功能后一定要将主机地址配置到usersession.properties的csrf.trusthosts中</strong></p><p>1、<strong>在usersession.properties中添加csrf.trusthosts</strong></p><p>#csrf信任地址列表，例：auth.cntaiping.com,10.1.117.40:8088,localhost:8089</p><p>csrf.trusthosts=localhost:8089,192.168.1.240:8080,192.168.1.240:8305</p><p>2、<strong>在UserSessionSettingUtil中增加以下代码</strong></p><p>a) 加入全局变量csrfTrustHosts。</p><p>private static List&lt;String&gt; csrfTrustHosts = new ArrayList&lt;String&gt;();</p><p>b) load(InputStream settings)方法中增加以下代码</p><p>csrfTrustHosts = parseIgnoreUrls(_props.getProperty("csrf.trusthosts"));</p><p>c) 增加方法isCsrfTrustHost</p><p>public static boolean isCsrfTrustHost(String host)&#123;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return csrfTrustHosts.contains(host);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;}</p><p>3、<strong>在UserSeesionFilter中增加以下代码</strong></p><p>boolean csrfEnabled = LocalSetting.getCSRFEnabled();<br/>if (csrfEnabled)&#123;<br/>&nbsp;&nbsp;&nbsp;&nbsp;if (referer != null)&#123;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String _requestUri = _request.getRequestURI();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (!_requestUri.endsWith("logon.jsp") &amp;&amp; !_requestUri.endsWith("logon.action"))&#123;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(referer.startsWith("http://"))&#123;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;referer = referer.substring("http://".length());<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else if(referer.startsWith("https://"))&#123;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;referer = referer.substring("https://".length());<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>LOGGER</em>.debug("referer:" + referer + ", &nbsp;&nbsp;host:" + host);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String[] hosts = referer.split("/");<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;boolean isCsrfTrustHost = UserSessionSettingUtil.isCsrfTrustHost(hosts[0]);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(!isCsrfTrustHost)&#123;//如果请求的地址不是受信地址，返回登陆页面<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gotoLogonPage(_request, _response);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;isDoFilter = false;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>LOGGER</em>.info("请求地址为非受信地址");<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else if (!referer.startsWith( host ))&#123;//如果请求地址和主机地址不同，返回登陆页面<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gotoLogonPage(_request, _response);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;isDoFilter = false;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>LOGGER</em>.info("请求地址和主机地址不一致");<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}</p>
+          </div>
+  </div>
+</div>
+
+
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+
+       <div class="doc-tags" id="xdocTags">
+        标签：
+        </div>
+
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       在2018/01/25 17:52上被<span class="wikilink"><a href="/xwiki/bin/view/XWiki/jfchen_1">诫孚 陈</a></span>创建<br/>
+          </div>
+  </div>
+</div>
+<div id="xwikidata">
+
+
+
+
+
+
+                          <div id="docextraanchors">
+<span id="Commentsanchor">&nbsp;</span><span id="Annotationsanchor">&nbsp;</span><span id="Attachmentsanchor">&nbsp;</span><span id="Historyanchor">&nbsp;</span><span id="Informationanchor">&nbsp;</span></div>
+  <div id="xwikidatacontents">
+    <div class="floatcontainer" id="docExtraTabs">
+      <ul class="xwikitabbar" id="docExtrasTabsUl">
+                  <li id="Commentstab">
+            <a id="Commentslink" href="/xwiki/bin/view/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/?viewer=comments">
+              评论  <span class="itemCount">（0）</span>             </a>
+          </li>
+                  <li id="Annotationstab">
+            <a id="Annotationslink" href="/xwiki/bin/view/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/?viewer=annotations">
+              Annotations  <span class="itemCount">（0）</span>             </a>
+          </li>
+                  <li id="Attachmentstab">
+            <a id="Attachmentslink" href="/xwiki/bin/view/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/?viewer=attachments">
+              附件  <span class="itemCount">（2）</span>             </a>
+          </li>
+                  <li id="Historytab">
+            <a id="Historylink" href="/xwiki/bin/view/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/?viewer=history">
+              记录             </a>
+          </li>
+                  <li id="Informationtab">
+            <a id="Informationlink" href="/xwiki/bin/view/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/?viewer=information">
+              信息             </a>
+          </li>
+              </ul>
+    </div>
+                <div id="docextrapanes">
+              <div id="Commentspane" class="hidden empty"></div>
+              <div id="Annotationspane" class="hidden empty"></div>
+              <div id="Attachmentspane" class="hidden empty"></div>
+              <div id="Historypane" class="hidden empty"></div>
+              <div id="Informationpane" class="hidden empty"></div>
+          </div>
+                <script type="text/javascript">
+      var hashviewer = self.document.location.hash.substring(1);
+                                                var extraInit = function(){ XWiki.displayDocExtra("Comments", "commentsinline.vm", false) };
+                if (hashviewer == "Comments") {
+          var extraInit = function(){ XWiki.displayDocExtra("Comments", "commentsinline.vm", true) };
+        }
+                                if ($("Commentslink") != null) {
+          $("Commentslink").href="#Comments";
+          Event.observe($("Commentslink"), "click", function(){ XWiki.displayDocExtra("Comments", "commentsinline.vm", false); }, false);
+        }
+                                if ($("tmShowComments") != null) {
+          $("tmShowComments").href="#Comments";
+          Event.observe($("tmShowComments"), "click", function(){ XWiki.displayDocExtra("Comments", "commentsinline.vm", true); }, false);
+        }
+                                if ($("commentsshortcut") != null) {
+          $("commentsshortcut").down('a').href="#comments";
+          Event.observe($("commentsshortcut"), "click", function(){ XWiki.displayDocExtra("Comments", "commentsinline.vm", true); }, false);
+        }
+                                                                              if (hashviewer == "Annotations") {
+          var extraInit = function(){ XWiki.displayDocExtra("Annotations", "annotationsinline.vm", true) };
+        }
+                                if ($("Annotationslink") != null) {
+          $("Annotationslink").href="#Annotations";
+          Event.observe($("Annotationslink"), "click", function(){ XWiki.displayDocExtra("Annotations", "annotationsinline.vm", false); }, false);
+        }
+                                if ($("tmShowAnnotations") != null) {
+          $("tmShowAnnotations").href="#Annotations";
+          Event.observe($("tmShowAnnotations"), "click", function(){ XWiki.displayDocExtra("Annotations", "annotationsinline.vm", true); }, false);
+        }
+                                if ($("annotationsshortcut") != null) {
+          $("annotationsshortcut").down('a').href="#annotations";
+          Event.observe($("annotationsshortcut"), "click", function(){ XWiki.displayDocExtra("Annotations", "annotationsinline.vm", true); }, false);
+        }
+                                                                              if (hashviewer == "Attachments") {
+          var extraInit = function(){ XWiki.displayDocExtra("Attachments", "attachmentsinline.vm", true) };
+        }
+                                if ($("Attachmentslink") != null) {
+          $("Attachmentslink").href="#Attachments";
+          Event.observe($("Attachmentslink"), "click", function(){ XWiki.displayDocExtra("Attachments", "attachmentsinline.vm", false); }, false);
+        }
+                                if ($("tmShowAttachments") != null) {
+          $("tmShowAttachments").href="#Attachments";
+          Event.observe($("tmShowAttachments"), "click", function(){ XWiki.displayDocExtra("Attachments", "attachmentsinline.vm", true); }, false);
+        }
+                                if ($("attachmentsshortcut") != null) {
+          $("attachmentsshortcut").down('a').href="#attachments";
+          Event.observe($("attachmentsshortcut"), "click", function(){ XWiki.displayDocExtra("Attachments", "attachmentsinline.vm", true); }, false);
+        }
+                                                                              if (hashviewer == "History") {
+          var extraInit = function(){ XWiki.displayDocExtra("History", "historyinline.vm", true) };
+        }
+                                if ($("Historylink") != null) {
+          $("Historylink").href="#History";
+          Event.observe($("Historylink"), "click", function(){ XWiki.displayDocExtra("History", "historyinline.vm", false); }, false);
+        }
+                                if ($("tmShowHistory") != null) {
+          $("tmShowHistory").href="#History";
+          Event.observe($("tmShowHistory"), "click", function(){ XWiki.displayDocExtra("History", "historyinline.vm", true); }, false);
+        }
+                                if ($("historyshortcut") != null) {
+          $("historyshortcut").down('a').href="#history";
+          Event.observe($("historyshortcut"), "click", function(){ XWiki.displayDocExtra("History", "historyinline.vm", true); }, false);
+        }
+                                                                              if (hashviewer == "Information") {
+          var extraInit = function(){ XWiki.displayDocExtra("Information", "informationinline.vm", true) };
+        }
+                                if ($("Informationlink") != null) {
+          $("Informationlink").href="#Information";
+          Event.observe($("Informationlink"), "click", function(){ XWiki.displayDocExtra("Information", "informationinline.vm", false); }, false);
+        }
+                                if ($("tmShowInformation") != null) {
+          $("tmShowInformation").href="#Information";
+          Event.observe($("tmShowInformation"), "click", function(){ XWiki.displayDocExtra("Information", "informationinline.vm", true); }, false);
+        }
+                                if ($("informationshortcut") != null) {
+          $("informationshortcut").down('a').href="#information";
+          Event.observe($("informationshortcut"), "click", function(){ XWiki.displayDocExtra("Information", "informationinline.vm", true); }, false);
+        }
+                                            document.observe("dom:loaded", extraInit, false);
+    </script>
+  </div> </div>
+    </div>      </div><div id="leftPanels" class="panels left panel-width-Medium">
+      <div class="panel expanded Applications"><h1 class="xwikipaneltitle">Applications</h1><div class="xwikipanelcontents"><ul class="applicationsPanel nav nav-pills nav-stacked">
+<li>
+<a href="/xwiki/bin/view/Blog/" title="博客">
+<span class="application-img"><img alt="Icon" src="/xwiki/resources/icons/silk/transmit.png" /></span>
+<span class="application-label">博客</span>
+</a>
+</li>
+<li>
+<a href="/xwiki/bin/view/Tour/" title="Tour">
+<span class="application-img"><img alt="Icon" src="/xwiki/resources/icons/silk/information.png" /></span>
+<span class="application-label">Tour</span>
+</a>
+</li>
+</ul>
+<ul class="applicationsPanel applicationsPanelMoreList nav nav-pills nav-stacked">
+<li>
+<a class="applicationPanelMoreButton" href="/xwiki/bin/admin/XWiki/XWikiPreferences?editor=globaladmin&amp;section=XWiki.AddExtensions" title="More applications">
+<span class="application-img"><img alt="Icon" src="/xwiki/resources/icons/silk/add.png" /></span>
+<span class="application-label">More applications</span>
+</a>
+<div class="applicationPanelMoreContainer hidden">
+<ul class="nav nav-pills nav-stacked">
+</ul>
+</div>
+</li>
+</ul></div></div>
+        <div class="panel expanded Navigation"><h1 class="xwikipaneltitle">导航</h1><div class="xwikipanelcontents">
+
+
+
+
+
+
+                                                                                                                                                      <div                                                                         class = "xtree"              data-responsive = "true"              data-url = "/xwiki/bin/get/Main/%E8%AE%A1%E6%80%BB%E5%8A%9E/CSRF%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/WebHome?outputSyntax=plain&#38;sheet=XWiki.DocumentTree&#38;showAttachments=false&#38;showTranslations=false&#38;"              data-dragAndDrop = "false"              data-contextMenu = "false"              data-icons = "false"              data-edges = "false"              data-checkboxes = "false"              data-openTo = "document:xwiki:Main.计总办.CSRF功能增强.WebHome"              data-finder = "false"  ></div></div></div>
+  </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal">
+  <div id="xwikilicence"></div>
+            <div id="xwikiplatformversion">
+                    <a href="http://enterprise.xwiki.org">
+                XWiki Enterprise 9.1.2
+              </a>
+          </div>
+  </div>
+
+</div></div></body>
+</html>
