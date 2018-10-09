@@ -1,2 +1,4 @@
 chardet
 html5lib
+pinyin
+pypinyin

@@ -1,5 +1,4 @@
 # 将字符串中第一个字母大写capitalize
-from base.string.String占位符 import url
 print('ayushi'.capitalize())
 print('@ayushi'.capitalize())
 
@@ -28,8 +27,6 @@ print("和asa111"[0].isalpha())
 
 print(r'\\n')
 print('\\n')
-print(url)
-# replace替换
 result = '22nbsp;111'.replace('nbsp;', "替换")
 print(result)
 print(r'E:\pythonCode\pythonDemo\resource')
