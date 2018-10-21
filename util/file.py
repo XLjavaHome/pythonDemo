@@ -56,3 +56,5 @@ if __name__ == '__main__':
     print(get_excel(get_Temp()))
     # file = list_file(r'C:\Users\Administrator\Desktop\1')
     # print(file)
+    # 获取当前目录
+    print(    os.path.abspath('1.jpg'))
