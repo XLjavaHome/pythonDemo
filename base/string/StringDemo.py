@@ -1,3 +1,9 @@
+'''
+字符串前u/U:表示unicode字符串
+ r/R:非转义的原始字符串
+ b:bytes
+'''
+
 # 将字符串中第一个字母大写capitalize
 print('ayushi'.capitalize())
 print('@ayushi'.capitalize())
