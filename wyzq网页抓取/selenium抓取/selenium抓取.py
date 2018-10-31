@@ -1,7 +1,6 @@
 import time
 
 from selenium import webdriver
-
 driver = webdriver.Firefox()
 # driver.get("http://www.hao123.com")
 driver.get("https://sirm.sinitek.com/first.jsp")

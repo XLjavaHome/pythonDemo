@@ -1,6 +1,9 @@
 # 输入
 # from xml import etree
 import requests
+'''
+
+'''
 # 将文本转化为对象
 url = "http://sinitek2.3322.org:8126/xwiki/bin/view/Main/?srid=2ShyM6Se"
 header = {
