@@ -1,11 +1,12 @@
 # 1到5的范围
-# index = 5
-# for i in range(1, index):
-#     print(i)
-#     if i == len(range(index)) - 1:
-#         print("循环结束")
-# else:
-#     print('for循环结束')
+index = 5
+# 没有1就是从0开始
+for i in range(1, index):
+    print(i)
+    if i == len(range(index)) - 1:
+        print("循环结束")
+else:
+    print('for循环结束')
 
 
 def release(lst):
