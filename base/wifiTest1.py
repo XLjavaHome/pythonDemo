@@ -1,5 +1,6 @@
 import time
 
+# import pywifi
 import pywifi
 from pywifi import const
 def testwifi(ssidname, password):

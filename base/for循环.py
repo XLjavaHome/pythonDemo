@@ -7,8 +7,6 @@ for i in range(1, index):
         print("循环结束")
 else:
     print('for循环结束')
-
-
 def release(lst):
     fmp = []
     for item in lst:
@@ -18,8 +16,10 @@ def release(lst):
                 yield item2
         else:
             yield item
-
-
+# 字典的循环
+tetdict = {'张三': '6', '李四': '1', '王五': '2'}
+for i in tetdict:
+    print(i + ":" + tetdict[i])
 # l = [1, 2, 3, 4, 5, [6], [7, 8, [9, [10]]]]
 # print(l)
 # lst = release(l)
